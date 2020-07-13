@@ -1,20 +1,11 @@
 package main
-import "fmt"
-func main() {
-	/**
-	基本数据类型
-	 */
-	fmt.Println("go" + "lang")
-	fmt.Println("1+1 =", 1+1)
-	fmt.Println("7.0/3.0 =", 7.0/3.0)
-	fmt.Println(true && false)
-	fmt.Println(true || false)
-	fmt.Println(!true)
 
-	fmt.Println("---------------------------------------------------")
-	/**
-	变量
-	*/
+import "fmt"
+
+/**
+变量
+ */
+func main() {
 	var a string = "土拨鼠" //var 声明变量，也可以申请多个
 	fmt.Println(a)
 
@@ -46,9 +37,4 @@ func main() {
 	)                 // 如果是多种类型 也可以使用集合
 	age1, age2 = age2, age1  //可以轻松实现交换变量的值
 	fmt.Println(age1, age2)
-	fmt.Println("---------------------------------------------------")
-	/**
-	常量
-	*/
-
 }
