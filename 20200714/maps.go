@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 
@@ -28,4 +31,21 @@ func main() {
 	// 使用短语法在一行内声明并初始化一个map。
 	b := map[int]int{1:1, 2:2}
 	fmt.Println(b)
+
+	//统计单词出现的次数
+	s := "how do you do"
+	words := strings.Split(s, " ")
+	wordCount := make(map[string]int, 8)
+	for _, word := range words {
+		count, ok := wordCount[word]
+		if ok {
+			wordCount[word] = count + 1
+		} else {
+			wordCount[word] = 1
+		}
+	}
+
+	for k, v := range wordCount {
+		fmt.Println(k, v)
+	}
 }
